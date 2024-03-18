@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== ICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+    <title>Finder</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo logo">Finder</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="filmes.html" class="nav__link ">
+                            <i class='bx bx-movie nav__icon'></i>
+                            <span class="nav__name">Filmes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="grupos.html" class="nav__link active-link ">
+                            <i class='bx bx-group nav__icon'></i>
+                            <span class="nav__name">Grupos</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="perfil.html" class="nav__link ">
+                            <i class='bx bx-user nav__icon'></i>
+                            <span class="nav__name">Perfil</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+
+        <!--=============== GRUPOS ===============-->
+        <section class="container section section__height" id="about">
+            <!-- Trigger/Open The Modal -->
+            <button class="button_group" id="myBtn">+ Novo Grupo</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Adicionar grupo</h2>
+                    </div>
+                    <div class="modal-body">
+
+                        <label>Nome: </label>
+                        <input type="text" />
+                        <label>Descrição: </label>
+                        <input type="text" />
+                        <label>Gêneros: </label>
+                        <ul class="ks-cboxtags">
+                            <li><input type="checkbox" id="checkboxOne" value="Aventura"><label
+                                    for="checkboxOne">Aventura</label></li>
+                            <li><input type="checkbox" id="checkboxTwo" value="Acao"><label
+                                    for="checkboxTwo">Ação</label></li>
+                            <li><input type="checkbox" id="checkboxThree" value="Comedia"><label
+                                    for="checkboxThree">Cómedia</label></li>
+                            <li><input type="checkbox" id="checkboxFive" value="Drama"><label
+                                    for="checkboxFive">Drama</label></li>
+                            <li><input type="checkbox" id="checkboxFour" value="Comedia_romantica"><label
+                                    for="checkboxFour">Cómedia romântica</label></li>
+                            <li><input type="checkbox" id="checkboxEight" value="Faroeste"><label
+                                    for="checkboxEight">Faroeste</label></li>
+                            <li><input type="checkbox" id="checkboxSix" value="Ficcao_cientifica"><label
+                                    for="checkboxSix">Ficção Científica</label></li>
+                            <li><input type="checkbox" id="checkboxNine" value="Musical"><label
+                                    for="checkboxNine">Musical</label></li>
+                            <li><input type="checkbox" id="checkboxSeven" value="Suspense"><label
+                                    for="checkboxSeven">Suspense</label></li>
+                            <li><input type="checkbox" id="checkboxTen" value="Terror"><label
+                                    for="checkboxTen">Terror</label></li>
+                        </ul>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="modal-button2" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="modal-button">Salvar</button>
+                    </div>
+                </div>
+
+            </div>
+            <h2>Seus grupos</h2>
+
+
+            <div class="grupos1">
+                <a href="infogrupos.html" class="grupos1">
+                    <div class="esqdir">
+                        <h1>Amigos e o Eduardo</h1>
+                        <h2 class="margemgrupo">Eventos</h2>
+                    </div>
+                    <div class="esqdir">
+                        <h1>4 participantes</h1>
+                        <h2 class="margemgrupos2">25/04/2024</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grupos1">
+                <a href="infogrupos.html" class="grupos1">
+                    <div class="esqdir">
+                        <h1>Nome do Grupo</h1>
+                        <h2 class="margemgrupos">Eventos</h2>
+                    </div>
+                    <div class="esqdir">
+                        <h1>x participantes</h1>
+                        <h2 class="margemgrupos2">xx/xx/xxxx</h2>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+        <datalist id="generos">
+            <option value="Aventura">
+            <option value="Ação">
+            <option value="Comédia">
+            <option value="Comédia romântica">
+            <option value="Drama">
+            <option value="Ficção Científica">
+            <option value="Suspense">
+            <option value="Terror">
+        </datalist>
+    </main>
+
+    <!--=============== MAIN JS ===============-->
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span2 = document.getElementsByClassName("modal-button2")[0];
+        var span = document.getElementsByClassName("modal-button")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            window.confirm("Novo grupo salvo com sucesso!");
+            modal.style.display = "none";
+        }
+
+        span2.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

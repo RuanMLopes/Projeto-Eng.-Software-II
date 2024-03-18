@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Finder</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="grupos.html" class="nav__logo"><i class='bx bx-left-arrow-alt'></i> Voltar</a>
+            <a href="#" class="nav__logo">Finder</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="filmes.html" class="nav__link ">
+                            <i class='bx bx-movie nav__icon'></i>
+                            <span class="nav__name">Filmes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="grupos.html" class="nav__link ">
+                            <i class='bx bx-group nav__icon'></i>
+                            <span class="nav__name">Grupos</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="perfil.html" class="nav__link ">
+                            <i class='bx bx-user nav__icon'></i>
+                            <span class="nav__name">Perfil</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <!--=============== infogrupos ===============-->
+    <section class="containergrupos section section__height" id="about">
+        <h1 class="centro">Amigos e o Eduardo</h1>
+        <p class="centro">Grupos de amigos que adoram assistir filmes juntos, e o Eduardo.</p>
+
+        <!-- Trigger/Open The Modal -->
+        <button class="button_add" id="myBtn">+ Novo Evento</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Adicionar evento</h2>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <label>Data:</label>
+                        <input type="date" id="start" name="trip-start" value="2023-11-27" min="2023-01-01"
+                            max="2024-12-31" />
+                        <label>Hora:</label>
+                        <input type="time" />
+                    </div>
+                    <label>Local:</label>
+                    <input type="text" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-button2" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="modal-button">Salvar</button>
+                </div>
+            </div>
+
+        </div>
+        <h2 class="section__title3"></h2>
+
+        <div class="grupos">
+            <div class="evento">
+                <div class="esqdir2">
+                    <p>Próximo evento:</p>
+                    <div class="margemevento">25/04/2024</div>
+                    <div class="margemevento">19:30</div>
+
+                </div>
+                <div>
+                    <h1 class="localevento">Local: Speciale Hotel </h1>
+                </div>
+
+
+            </div>
+            <div>
+                <a href="grupo-ranking.html">
+                    <button>Ver Ranking de Filmes</button>
+                </a>
+            </div>
+            <div>
+                <h3>Membros: 4</h3>
+                <p>+ Convidar via link</p>
+            </div>
+            <div>
+                <ul>
+                    <li> Camila Oliveira </li>
+                    <li> Juninho Virgilho</li>
+                    <li> Edielson Oliveira </li>
+                    <li> Eduardo de Oliveira</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span2 = document.getElementsByClassName("modal-button2")[0];
+        var span = document.getElementsByClassName("modal-button")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            window.confirm("Novo evento salvo com sucesso!");
+            modal.style.display = "none";
+        }
+
+        span2.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>

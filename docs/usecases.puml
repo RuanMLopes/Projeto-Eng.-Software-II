@@ -1,0 +1,43 @@
+@startuml caso-de-uso
+
+left to right direction
+
+actor Usuario as g
+actor API as a
+
+ 
+
+package Finder {
+
+  usecase "Criar Grupos" as UC1
+
+  usecase "Criar Eventos" as UC2
+
+  usecase "Escolher Filmes" as UC3
+
+  usecase "Vizualizar Ranking de Filmes" as UC4
+
+  usecase "Marcar como Assistido" as UC5
+
+  usecase "Avaliar Filmes" as UC6
+
+  usecase "Alimentar Filmes" as UC7
+
+}
+
+ 
+a --> UC7
+
+g --> UC1
+
+g --> UC2
+
+g --> UC3
+
+g --> UC4
+
+g --> UC5
+
+g --> UC6
+
+@enduml

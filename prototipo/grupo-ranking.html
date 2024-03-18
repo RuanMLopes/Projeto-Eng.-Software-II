@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Finder</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="infogrupos.html" class="nav__logo"><i class='bx bx-left-arrow-alt'></i> Voltar</a>
+            <a href="#" class="nav__logo">Finder</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="filmes.html" class="nav__link ">
+                            <i class='bx bx-movie nav__icon'></i>
+                            <span class="nav__name">Filmes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="grupos.html" class="nav__link ">
+                            <i class='bx bx-group nav__icon'></i>
+                            <span class="nav__name">Grupos</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="perfil.html" class="nav__link ">
+                            <i class='bx bx-user nav__icon'></i>
+                            <span class="nav__name">Perfil</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <!--=============== grupos-ranking ===============-->
+        <div class="containerrank">
+            <h1 class="centro">Ranking de Filmes </h1>
+        </div>
+
+        <!-- The Modal  Filme 1-->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Urso do Pó Branco</h2>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <img src="assets/img/urso.jpeg" class="imagemrank">
+                    </div>
+                    <div>
+                        <h4></h4><input type="checkbox" id="myCheckbox">
+                        Marcar como assistido
+                    </input>
+                    </div>
+                    
+                    <div class="avaliar hidden" id="hiddenInputs">
+                    <h4>Aproveite para avaliar!</h4>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-button2" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="modal-button">Salvar</button>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="containerrank section" id="myBtn">
+            <h2 class="titulorank" >1º - Urso do Pó Branco</h2>
+            <img src="assets/img/urso.jpeg" class="imagemrank">
+            <h3 class="centro">3 Votos</h3>
+        </section>
+
+        <!-- The Modal  Filme 2-->
+        <div id="myModal1" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Bebês Geniais 2</h2>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <img src="assets/img/bebegenio.jpeg" class="imagemrank">
+                    </div>
+                    <div>
+                        <h4></h4><input type="checkbox" id="myCheckbox">
+                        Marcar como assistido
+                    </input>
+                    </div>
+                    <h4 class="avaliar">Aproveite para avaliar!</h4>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-button2" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="modal-button">Salvar</button>
+                </div>
+            </div>
+
+        </div>
+        
+        <section class="containerrank section" id="myBtn1">
+            <h2 class="titulorank">2º - Bebês Geniais 2</h2>
+            <img src="assets/img/bebegenio.jpeg" class="imagemrank">
+            <h3 class="centro">2 Votos</h3>
+        </section>
+
+        <!-- The Modal  Filme 3-->
+        <div id="myModal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Internet o Filme</h2>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <img src="assets/img/internet.jpg" class="imagemrank">
+                    </div>
+                    <div>
+                        <h4></h4><input type="checkbox" id="myCheckbox">
+                        Marcar como assistido
+                    </input>
+                    </div>
+                    <h4 class="avaliar">Aproveite para avaliar!</h4>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-button2" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="modal-button">Salvar</button>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="containerrank section ultimo" id="myBtn2">
+            <h2 class="titulorank">3º - Internet o Filme</h2>
+            <img src="assets/img/internet.jpg" class="imagemrank">
+            <h3 class="centro">2 Votos</h3>
+        </section>
+
+        <!--hr>-->
+    </main>
+    <script>
+        // Get the modals
+        var modal1 = document.getElementById("myModal");
+        var modal2 = document.getElementById("myModal1");
+        var modal3 = document.getElementById("myModal2");
+
+        // Get the buttons that open the modals
+        var btn1 = document.getElementById("myBtn");
+        var btn2 = document.getElementById("myBtn1");
+        var btn3 = document.getElementById("myBtn2");
+
+        // Get the <span> elements that close the modals
+        var span1 = document.getElementsByClassName("modal-button")[0];
+        var span2 = document.getElementsByClassName("modal-button2")[0];
+
+        // When the user clicks on section 1, open modal 1
+        btn1.onclick = function() {
+        modal1.style.display = "block";
+        };
+
+        // When the user clicks on section 2, open modal 2
+        btn2.onclick = function() {
+        modal2.style.display = "block";
+        };
+
+        // When the user clicks on section 3, open modal 3
+        btn3.onclick = function() {
+        modal3.style.display = "block";
+        };
+
+        // When the user clicks on <span> (x) in modal 1, close modal 1
+        span1.onclick = function() {
+        modal1.style.display = "none";
+        };
+
+        // When the user clicks on <span> (x) in modal 1, close modal 1
+        span2.onclick = function() {
+        modal1.style.display = "none";
+        };
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal1 || event.target == modal2 || event.target == modal3) {
+            modal1.style.display = "none";
+            modal2.style.display = "none";
+            modal3.style.display = "none";
+        }
+        };
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtenha referências para o checkbox e os inputs ocultos
+            var checkbox = document.getElementById('myCheckbox');
+            var hiddenInputs = document.getElementById('hiddenInputs');
+
+            // Adicione um ouvinte de eventos para o evento 'change' do checkbox
+            checkbox.addEventListener('change', function () {
+                // Alterne a visibilidade dos inputs com base no estado do checkbox
+                if (checkbox.checked) {
+                    hiddenInputs.classList.remove('hidden');
+                } else {
+                    hiddenInputs.classList.add('hidden');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

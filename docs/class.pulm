@@ -1,0 +1,61 @@
+@startuml modelo-conceitual
+
+ 
+class Usuario
+{
+  id_usuario: long 
+  nome_usuario: string
+  email_usuario: string
+  senha_usuario: string
+  premium: bool
+  max_grupo: int
+}
+class Grupo
+{
+    id_grupo: long
+    nomeGrupo: string
+    descricao: string
+}
+class Filme
+{
+   id_filme: long
+}
+class Evento
+{
+    id_evento: long
+    data_evento: date
+    hora_evento: time
+    local: string
+}
+class Genero
+{
+    id_genero: int
+    nome_genero: string
+}
+class Votacao
+{
+    id_votacao: long
+    interesse: bool
+} 
+class Avaliacao
+{
+    id_avaliacao: long
+    avaliacao: int
+}
+class Marcar_Assistido
+{
+    id_assistido: long
+    assistido: bool
+}
+Usuario -- Votacao
+Votacao -- Filme
+Usuario -- Avaliacao
+Avaliacao -- Filme
+Usuario -- Grupo
+Filme -- Evento
+Filme -- Genero
+Genero -- Grupo
+Grupo -- Evento
+Marcar_Assistido -- Filme
+Marcar_Assistido -- Grupo
+@enduml
